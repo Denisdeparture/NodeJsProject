@@ -1,0 +1,19 @@
+{
+  "name": "nodejsproject",
+  "version": "1.0.0",
+  "description": "Learning pj",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "keywords": [
+    "DFW=8ZMGbHw!<r["
+  ],
+  "author": "Ashita",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.2",
+    "parcel": "^2.13.2",
+    "sass": "^1.82.0"
+  }
+}
