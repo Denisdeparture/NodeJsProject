@@ -1,0 +1,98 @@
+@use './global/_variable.scss' as *;
+.work-container{
+   display: grid;
+   grid-template-columns: repeat(4,0fr);
+   grid-template-rows: repeat(2, 0fr);
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.work-container-item{
+   position: relative;
+   cursor: pointer;
+   width: 378px;
+   border: 1px white solid;
+   height: 340px;
+}
+.work-container-item:hover , .work-container-item:active{
+   & .work-container-item__mask-title{
+      display: block;
+      position: absolute;
+      top: 40%;
+      left: 24%;
+      z-index: 3;
+   }
+   & .work-container-item__mask-subject{
+      display: block;
+      position: absolute;
+      left: 24%;
+      top: 50%;
+      z-index: 3;
+   }
+}
+.work-container-item:hover::after{
+   content: '';
+   display: inline-block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(255, 67, 67, 0.8);
+   z-index: 2;
+}
+.work-container-item:active::after{
+   content: '';
+   display: inline-block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(185, 12, 12, 0.8);
+   z-index: 2;
+}
+.work-container-item__mask-title{
+   display: none;
+   color: white;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: $h4_size;
+   font-weight: 900;
+   font-family: $font_raleway;
+}
+
+.work-container-item__mask-subject{
+   display: none;
+   text-align: center;
+   font-size: 18px;
+   font-family: $font_raleway;
+   color: white;
+}
+.work-container-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media(max-width: $phone_adaptive){
+   .work-container{
+      display: grid;
+      grid-template-columns: repeat(2,0fr);
+      grid-template-rows: repeat(4, 0fr);
+   }
+   .work-container-item{
+      width: 160px;
+      height: 144px;
+   }
+   .work-container-item:hover , .work-container-item:active{
+      & .work-container-item__mask-title{
+         left: 20%;
+         top: 20%;
+      }
+      & .work-container-item__mask-subject{
+         left: 20%;
+         top: 60%;
+      }
+   }
+}
+
+
