@@ -1,0 +1,48 @@
+@use './global/_variable.scss' as *;
+.features{
+    padding: 100px 100px;
+}
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+}
+.container-grid__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-grid__card__icon{
+    margin-bottom: 30px;
+}
+.container-grid__card__title{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: $h4_size;
+    font-family: $font_raleway;
+    font-weight: 900;
+}
+.container-grid__card__subject{
+    max-width: 370px;
+    text-align: center;
+    font-size: 18px;
+    font-family: $font_raleway;
+}
+@media(max-width: $phone_adaptive){
+    .container-grid{
+        display: block;
+    }
+    .container-grid__card{
+        margin-bottom: 30px;
+    }
+    .container-grid__card__title{
+        width: 279px;
+    }
+    .container-grid__card__subject{
+        width: 279px;
+    }
+}
