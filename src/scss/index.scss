@@ -2,6 +2,12 @@
 @import url('./global/_mixins.scss');
 @import url('./global/_variable.scss');
 @import url('./header.scss');
+@import url('./feautures.scss');
+@import url('./work.scss');
+@import url('./our-team.scss');
+@import url('./testimonials.scss');
+@import url('./download.scss');
+@import url('./footer.scss');
 *{
     margin: 0;
     padding: 0;
@@ -16,4 +22,5 @@ html{
     max-width: 1510px;
     margin: auto;
     padding: 0 15px;
+    overflow-x: hidden;
 }
