@@ -15,5 +15,8 @@
     "@parcel/transformer-sass": "^2.13.2",
     "parcel": "^2.13.2",
     "sass": "^1.82.0"
+  },
+  "dependencies": {
+    "swiper": "^11.1.15"
   }
 }
